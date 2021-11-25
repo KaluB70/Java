@@ -65,21 +65,27 @@ public class T23_24 {
         
         
         for (int i = 0; i < id.size(); i++) {
-            Jobs j = new Jobs(id.get(i), durationInMinutes.get(i), day.get(i), jobCode.get(i), startTime.get(i), endTime.get(i));
-            allJobs.add(j);
-            if (!codes.contains(jobCode.get(i))) {
-                codes.add(j.getJobCode());
+
+            Jobs j = new Jobs(id.get(i), durationInMinutes.get(i), day.get(i),  //Adding the data to the class
+            jobCode.get(i), startTime.get(i), endTime.get(i));
+            
+            allJobs.add(j);                                                     //24 a)
+            
+            if (!codes.contains(jobCode.get(i))) {                              //24 b)
+                codes.add(j.getJobCode());                                      
             }
-            if (codeOccurences.containsKey(j.getJobCode())) {
-                codeOccurences.put(j.getJobCode(), codeOccurences.get(j.getJobCode()) + 1);
+            if (codeOccurences.containsKey(j.getJobCode())) {                   //24 d) (*for every day)
+                codeOccurences.put(j.getJobCode(),
+                codeOccurences.get(j.getJobCode()) + 1);
             }
             else{
                 codeOccurences.put(j.getJobCode(), 1);
             }
-            if (!codesPerDay.containsKey(j.getDay())) {
+            if (!codesPerDay.containsKey(j.getDay())) {                         // 24 e)
                 codesPerDay.put(j.getDay(),j.getJobCode());
             }
-            else if(codesPerDay.containsKey(j.getDay()) && !codesPerDay.get(j.getDay()).contains(j.getJobCode())){
+            else if(codesPerDay.containsKey(j.getDay()) && 
+            !codesPerDay.get(j.getDay()).contains(j.getJobCode())){
                 String temp = codesPerDay.get(j.getDay());
                 temp += j.getJobCode();
                 codesPerDay.put(j.getDay(), temp);
@@ -102,19 +108,19 @@ public class T23_24 {
 //        }
 
         Set<String> allKeys = codesPerDay.keySet();
-        for ( String temp : allKeys ) {
-          String value = codesPerDay.get(temp);
-          System.out.println(temp +": "+ value);
-        }
+        allKeys.forEach(temp -> {
+            String value = codesPerDay.get(temp);
+            System.out.println(temp +": "+ value);
+        });
     }
 }
 class Jobs implements Comparable<Jobs>, Comparator<Jobs>{
-    private final int id;
-    private final int durationInMinutes;
-    private final String day;
-    private final String jobCode;
-    private final Double startTime;
-    private final Double endTime;
+    int id;
+    int durationInMinutes;
+    String day;
+    String jobCode;
+    Double startTime;
+    Double endTime;
 
 
     public Jobs(int id, int durationInMinutes, String day, String jobCode, Double startTime, Double endTime) {
