@@ -11,7 +11,12 @@ public class T21 {
 //          is copied from: https://fi.wikipedia.org/wiki/Fibonaccin_lukujono.
     
     public static void main(String[] args) {
-        final int AMOUNT = 15;
+        //Adding Fibonacci series with the length of the variable to 2 ArrayLists
+        //1st list contains the series made by the formula provided (To be tested in the task)
+        //2nd list contains the series made by recursive calculation proven to be right
+        //Comparing the two lists:
+        
+        final int AMOUNT = 30;
         int [] arrFormula = FibonacciFormula(AMOUNT);
         int [] arrRecursive = FibonacciRecursive(AMOUNT);
         System.out.println("Formula <---> Recursive");
@@ -46,6 +51,7 @@ public class T21 {
         }
         return values;
     }
+    //Helper method for recursive calculation
     public static int Fib(int n){
         if (n<2) {
             return n;
@@ -55,15 +61,16 @@ public class T21 {
     public static int [] FibonacciFormula(int n){
         int [] values = new int[n];
         for (int i = 0; i < n; i++) {
-            double formula = Math.round(1/Math.sqrt(5)*GoldenRatioPos(i) - GoldenRatioNeg(i));
+            double formula = Math.round(1/Math.sqrt(5)*GoldenRatioPlus(i) - GoldenRatioMinus(i));
             values[i] = formula >= 0 ? (int)formula : 0;
         }
         return values;
     }
-    private static double GoldenRatioPos(int i){
+    //Golden ratio ~1.61803
+    private static double GoldenRatioPlus(int i){
         return Math.pow((1+Math.sqrt(5))/2, i);
     }
-    private static double GoldenRatioNeg(int i){
+    private static double GoldenRatioMinus(int i){
         return Math.pow((1-Math.sqrt(5))/2, i);
     }
     

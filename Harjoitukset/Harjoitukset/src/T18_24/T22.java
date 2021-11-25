@@ -13,8 +13,11 @@ public class T22 {
 //        series. See  https://fi.wikipedia.org/wiki/Fibonaccin_lukujono, for details.
     
     public static void main(String[] args) {
-        int n = 5;
-        int length = 16;
+        //n = How many previous numbers are summed
+        //length = wanted length of the series
+        //Program calulates any n-step fibonacci series
+        final int n = 6;
+        final int length = 20;
         AnyNacci an = new AnyNacci(n,length);
         AnyNacci.Name(n);
         System.out.println("nacci number: \n"+an);
@@ -22,8 +25,11 @@ public class T22 {
     
 }
 class AnyNacci{
+    //Field parameter
     int [] series;
 
+    //Constructor - Calls the calculator method when making the class to get the
+    //Series immediately
     public AnyNacci(int n, int reqNumbers) {
         this.series = new int[reqNumbers];
         series = Calculator(n, reqNumbers);
@@ -33,6 +39,7 @@ class AnyNacci{
     public String toString() {
         return Arrays.toString(series);
     }
+    //Methods containing the formula to get wanted results
     public static int[] Calculator(int n, int numRequested){
         if (n < 2) {
             return new int[]{0};
@@ -49,6 +56,7 @@ class AnyNacci{
         retVal[i] += retVal[i - j];
     return retVal;
     }
+    //Method for outputting the correct name depending on the n-value
     public static void Name(int n){
         switch (n){
             case 2 -> System.out.print("Fibo");

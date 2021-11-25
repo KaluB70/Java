@@ -14,7 +14,8 @@ public class T20 {
 //      b)	Make comparators (ascending and descending) which orders the dates.
 
     public static void main (String[] args){
-        ArrayList<Date> dateL = new ArrayList<Date>();
+        //Making the Date objects and adding them to an ArrayList
+        ArrayList<Date> dateL = new ArrayList<>();
         TimeOfDay tod = new TimeOfDay(12, 3, 45);
         TimeOfDay tod1 = new TimeOfDay(3, 21, 21);
         TimeOfDay tod2 = new TimeOfDay(6, 56, 12);
@@ -41,6 +42,7 @@ public class T20 {
         Collections.sort(dateL, new SortDescendingDate());
         PrintList(dateL);
     }
+    //Prints the ArrayList of Date objects
     static private void PrintList(ArrayList<Date> date){
             date.forEach(d-> {
                 System.out.println(d);
@@ -49,22 +51,24 @@ public class T20 {
         }
 }
 class Date{
+    //Field parameters
     private int dayNr;
     private int monthNr;
     private int yearNr;
-    private TimeOfDay timeOfDay;
+    private final TimeOfDay timeOfDay;
 
-    public TimeOfDay getTimeOfDay() {
-        return timeOfDay;
-    }
-
+    //Constructor
     public Date(int YearNr, int MonthNr, int DayNr, TimeOfDay timeOfDay) {
         this.dayNr = DayNr;
         this.monthNr = MonthNr;
         this.yearNr = YearNr;
         this.timeOfDay = timeOfDay;
     }
-
+    
+    //Accessors    
+    public TimeOfDay getTimeOfDay() {
+        return timeOfDay;
+    }
     public int getDayNr() {
         return dayNr;
     }
@@ -83,7 +87,7 @@ class Date{
     public void setYearNr(int YearNr) {
         this.yearNr = YearNr;
     }
-     
+    //a
     public void DecreaseDate(int years, int months, int days, TimeOfDay tod){
         timeOfDay.DecreaseTime(tod.TimeToSeconds(tod.GetHours(), tod.GetMinutes(), tod.GetSeconds()));
         dayNr -= days;
@@ -120,10 +124,9 @@ class Date{
     public String toString() {
         return "Year: " + yearNr + " - Month: " +  monthNr + " - Day: " + dayNr + " - Time of day: " +  timeOfDay;
     }
-    
-    
-    
 }
+
+//b
 class SortAscendingDate implements Comparator<Date>{
 
     @Override
@@ -132,7 +135,6 @@ class SortAscendingDate implements Comparator<Date>{
         int days2 = (o2.getYearNr()*365)+(o2.getMonthNr()*12)+o2.getDayNr();
         return days1 != days2 ? days1-days2 : o1.getTimeOfDay().TimeToSeconds() - o2.getTimeOfDay().TimeToSeconds();
     }
-    
 }
 class SortDescendingDate implements Comparator<Date>{
 
@@ -143,5 +145,4 @@ class SortDescendingDate implements Comparator<Date>{
         
         return days1 != days2 ? days2-days1 : o2.getTimeOfDay().TimeToSeconds() - o1.getTimeOfDay().TimeToSeconds();
     }
-    
 }

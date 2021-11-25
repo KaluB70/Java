@@ -29,13 +29,13 @@ public class T18 {
         System.out.println("Average:" + n.mean);
 
     }
-    /**
-    * Jos haluamme keskiarvon päivittyvän aina automaattisesti, tämä on hyvä tapa siihen.
-    * On kuitenkin olemassa tilanteita, jossa vaikkapa haluaisimme tietää keskiarvon ennen poistoa/lisäystä,
-    * jonka vuoksi emme itse "hallitse" arvojen käsittelyä, mikäli ohjelma toimii näin kuin tässä.
-    * Jos tämän lisäksi käsittelisimme isoa määrää dataa kerralla, lisäämällä/poistamalla samaan aikaan
-    * paljon numeroita, voi ongelmaksi tulla menetettyjä päivityksiä säikeiden päälleikkäisten
-    * päivitysten vuoksi.
+    /*
+    Jos haluamme keskiarvon päivittyvän aina automaattisesti, tämä on hyvä tapa siihen.
+    On kuitenkin olemassa tilanteita, jossa vaikkapa haluaisimme tietää keskiarvon ennen poistoa/lisäystä,
+    jonka vuoksi emme itse "hallitse" arvojen käsittelyä, mikäli ohjelma toimii näin kuin tässä.
+    Jos tämän lisäksi käsittelisimme isoa määrää dataa kerralla, lisäämällä/poistamalla samaan aikaan
+    paljon numeroita, voi ongelmaksi tulla menetettyjä päivityksiä säikeiden päälleikkäisten
+    päivitysten vuoksi.
     */
     static class Numbers {
         ArrayList<Integer> nums;
