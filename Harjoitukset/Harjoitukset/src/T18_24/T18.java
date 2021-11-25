@@ -3,6 +3,14 @@ import java.util.ArrayList;
 
 public class T18 {
 
+//    18.	Make a class which holds an undefined amount of numbers. 
+//      a)	The user must be able to insert and delete numbers from the class.
+//      b)	The class has a method for returning the average of the numbers.
+//      c)	The class holds the average of the numbers. This means the class 
+//              updates the average whenever necessary. Jari remembers to explain this.
+//      d)	After finishing part c) think: why would we ever write such code? 
+//              It has side-effects and as such violates f.ex. the paradigm of functional programming.
+
     public static void main(String[] args) {
         Numbers n = new Numbers();
         n.AddNum(3);
@@ -17,7 +25,7 @@ public class T18 {
         System.out.println("Removed number 53, the new values are: \nNumbers: " + n.nums);
         System.out.println("Average: "+n.mean);
         n.DelNumByIndex(0);
-        System.out.println("Removed a number from index 0, the new value are: \nNumbers: " + n.nums);
+        System.out.println("Removed a number from index 0, the new values are: \nNumbers: " + n.nums);
         System.out.println("Average:" + n.mean);
 
     }
