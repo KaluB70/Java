@@ -24,7 +24,7 @@
 
 21. The formula below can be used to calculate the Fibonacci numbers. We could mathematically prove that the formula is correct, but that is quite difficult, especially if you’re not a mathematician. Instead we can prove it works by coding a program to test the formula. Do that. The formula is copied from: https://fi.wikipedia.org/wiki/Fibonaccin_lukujono.
 
-<img src="https://github.com/KaluB70/Java/tree/main/Harjoitukset/Harjoitukset/media/image1.png" style="width:2.71389in;height:0.6125in" />
+![F](https://wikimedia.org/api/rest_v1/media/math/render/svg/fa7fe08d3a58c713b0e3257c2934afd2de9bbe47)
 
 1.  A Fibonacci number is calculated as the sum of the two previous Fibonacci numbers, i.e. F<sub>i</sub> = F<sub>i-1</sub> + F<sub>i-2</sub>. The two first numbers are 0 and 1 and after that the series continues as explained. Make a class to calculate any “nacci” series. See [<u>https://fi.wikipedia.org/wiki/Fibonaccin_lukujono</u>](https://fi.wikipedia.org/wiki/Fibonaccin_lukujono), for details.
 

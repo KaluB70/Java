@@ -1,6 +1,6 @@
 ## Java exercises
 
-1.  Write code to calculate the distance between two points in a two-dimensional space. The formula for calculating the distance is $\\sqrt{\\(( x_{1} - x_{2} \\)^{2} + \\( y_{1} - y_{2} \\)^{2})}$.
+1.  Write code to calculate the distance between two points in a two-dimensional space. The formula for calculating the distance is ![Equation](http://www.sciweavers.org/tex2img.php?eq=%20%5Csqrt%7B%28x_1%20-%20x_2%29%5E2%20%2B%20%28y_1%20-%20y_2%29%5E2%20%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0).
 
 2.  Write code to display all numbers between n and m which are not divisible by 7 and/or 17.
 
