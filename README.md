@@ -10,5 +10,5 @@ Tentit - Exams: <br>
 
 Harjoitukset - Exercises: <br>
 
-1. [Harjoitukset 1-17](https://github.com/KaluB70/Java/tree/main/Harjoitukset/Harjoitukset/src/T1_17)
-2. [Harjoitukset 18-24](https://github.com/KaluB70/Java/tree/main/Harjoitukset/Harjoitukset/src/T18_24)
+1. [Harjoitukset 1-17](https://github.com/KaluB70/Java/tree/main/Harjoitukset/Harjoitukset/src/T1_17) - [Tehtävänanto](https://github.com/KaluB70/Java/blob/main/Harjoitukset/Harjoitukset/Assignment_1-17.md)
+2. [Harjoitukset 18-24](https://github.com/KaluB70/Java/tree/main/Harjoitukset/Harjoitukset/src/T18_24) - [Tehtävänanto](https://github.com/KaluB70/Java/blob/main/Harjoitukset/Harjoitukset/Assignment_18-24.md)
