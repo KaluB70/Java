@@ -6,3 +6,10 @@
 /Tentit/Tentti-3/nbproject/private/
 /Tentit/Tentti-3/build/
 /Tentit/Tentti-3/dist/
+Docs/
+Luennot/
+.class
+.log
+.ctxt
+.mtj.tmp/
+hs_err_pid*
