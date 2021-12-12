@@ -13,3 +13,6 @@
 .ctxt
 .mtj.tmp/
 hs_err_pid*
+/Koodausharjoitus/nbproject/private/
+/Koodausharjoitus/build/
+/Koodausharjoitus/dist/
